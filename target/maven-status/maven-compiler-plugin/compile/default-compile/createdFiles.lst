@@ -254,6 +254,7 @@ com\company\wsdl\ArrayOfWDSCarSettingsItem.class
 com\company\wsdl\ArrayOfWDSDriverRatingAccelItem.class
 com\company\wsdl\WDSBorderCross2Item.class
 com\company\wsdl\WDSLBParamListItem.class
+com\company\Main.class
 com\company\wsdl\WDSLandCropSett.class
 com\company\wsdl\WDSDCRepBItem.class
 com\company\wsdl\ArrayOfWDSCostTypeItem.class

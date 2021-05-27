@@ -38,8 +38,7 @@ public class Main {
         }
     }
 
-    private static SOAPMessage createSOAPRequest(String functionName, Map<String, String> parameters) throws Exception
-    {
+    private static SOAPMessage createSOAPRequest(String functionName, Map<String, String> parameters) throws Exception{
         MessageFactory messageFactory = MessageFactory.newInstance();
         SOAPMessage soapMessage = messageFactory.createMessage();
         SOAPPart soapPart = soapMessage.getSOAPPart();
