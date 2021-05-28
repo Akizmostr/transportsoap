@@ -9,7 +9,8 @@
         <module name="transportsoap" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="15">
+      <module name="jaxb2-maven-plugin" target="1.8" />
       <module name="transportsoap" target="15" />
     </bytecodeTargetLevel>
   </component>

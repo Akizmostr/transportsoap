@@ -1,8 +1,12 @@
 package com.company;
 
-import javax.xml.soap.*;
+import jakarta.xml.soap.*;
+import org.w3c.dom.NodeList;
+
+
 import java.util.HashMap;
 import java.util.Map;
+
 
 public class Main {
     // login data
@@ -28,8 +32,22 @@ public class Main {
 
             // create a request with parameter for calling the function _getCarsList ()
             SOAPMessage soapRequestCarList = createSOAPRequest("_getCarsList", parametersCarList);
-            // calling the function_getCarsList () to get the car registration number
+            // calling the function_getCarsList ()
             SOAPMessage soapResponseCarList = soapConnection.call(soapRequestCarList, url);
+
+            // Print the SOAP Response
+            System.out.println("Response SOAP Message:");
+            soapResponseCarList.writeTo(System.out);
+            System.out.println();
+
+            // get response body - tag content <SOAP-ENV:Body>
+            SOAPBody responseCarList = soapResponseCarList.getSOAPBody();
+            // element <ns1:_getCarsListResponse>
+            Node getAllCarsPositionResponse = (Node) responseCarList.getFirstChild();
+            // element <return>
+            Node returnContent = (Node) getAllCarsPositionResponse.getFirstChild();
+
+            NodeList items = returnContent.getChildNodes();
 
         }
         catch(Exception e){
