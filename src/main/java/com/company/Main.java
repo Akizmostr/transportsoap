@@ -10,7 +10,9 @@ import org.w3c.dom.NodeList;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
@@ -86,14 +88,25 @@ public class Main {
             }
             soapConnection.close();
 
+            CarRepository carRepo = new CarRepository();
+
             for (Map.Entry<Integer, Car> entry : cars.entrySet())
             {
                 Car car = entry.getValue();
-                float latitude = car.getLatitude();
+                carRepo.updateCar(car);
+                /*float latitude = car.getLatitude();
                 float longitude = car.getLongitude();
                 String identifier = car.getIdentifier();
                 if(car.getDisabled() == 0)
-                    System.out.printf("%s %f %f%n", identifier, latitude, longitude);
+                    System.out.printf("%s %f %f%n", identifier, latitude, longitude);*/
+            }
+
+            List<Car> cars1 = new ArrayList<>();
+
+            cars1 = carRepo.findAllCars();
+            for (Car car :
+                    cars1) {
+                System.out.println(car);
             }
         }
         catch(Exception e){
