@@ -59,30 +59,4 @@
 
     </dependencies>
 
-    <build>
-        <plugins>
-            <!--<plugin>
-                <groupId>org.jvnet.jaxb2.maven2</groupId>
-                <artifactId>maven-jaxb2-plugin</artifactId>
-                <version>0.14.0</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <schemaLanguage>WSDL</schemaLanguage>
-                    <generatePackage>com.company.wsdl</generatePackage>
-                    <schemas>
-                        <schema>
-                            <url>https://api.webdispecink.cz/code/WebDispecinkServiceNet.php?wsdl</url>
-                        </schema>
-                    </schemas>
-                </configuration>
-            </plugin>-->
-
-        </plugins>
-    </build>
 </project>

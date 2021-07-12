@@ -18,9 +18,9 @@ import java.util.Map;
 
 public class Main {
     // login data
-    private static final String KODF = "martinkolek";
-    private static final String USERNAME = "asstra";
-    private static final String PASS = "asstra1";
+    private static final String KODF = "XXX";
+    private static final String USERNAME = "XXX";
+    private static final String PASS = "XXX";
     static final Logger log = LoggerFactory.getLogger(Main.class);
 
     public static void main(String[] args) {
@@ -94,20 +94,13 @@ public class Main {
             {
                 Car car = entry.getValue();
                 carRepo.updateCar(car);
-                /*float latitude = car.getLatitude();
+                float latitude = car.getLatitude();
                 float longitude = car.getLongitude();
                 String identifier = car.getIdentifier();
                 if(car.getDisabled() == 0)
-                    System.out.printf("%s %f %f%n", identifier, latitude, longitude);*/
+                    System.out.printf("%s %f %f%n", identifier, latitude, longitude);
             }
 
-            List<Car> cars1 = new ArrayList<>();
-
-            cars1 = carRepo.findAllCars();
-            for (Car car :
-                    cars1) {
-                System.out.println(car);
-            }
         }
         catch(Exception e){
             System.err.println("Error occurred while handling SOAP Request.");
